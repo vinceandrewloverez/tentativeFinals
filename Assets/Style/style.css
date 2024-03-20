@@ -1,83 +1,167 @@
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 25px 5px;
+  font-family: "Anek Kannada", sans-serif;
+  font-weight: thin;
+  font-size: 12px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 100px;
+  font-family: "Anek Kannada", sans-serif;
+  letter-spacing: -3px;
+  text-align: left;
+  width: 100%;
+  height: 90%;
+}
+
+h2{
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: "Anek Kannada", sans-serif;
+}
+
+h3{
+  font-size: 15px;
+}
+
+h3:hover {
+  text-decoration: underline;
+  transition: 0.15s;
+}
+
+
+hr{
+  border-color: #262c32;
+}
+
+.logo {
+  margin-right: 30%;
+  margin-left: 10%;
+  width: 75px;
+  height: auto;
+}
+
+.search-container {
+  background-color: #fff;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #fff;
+  float: left;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #b12424;
+  color: white;
+  font-size: 17px;
+  border: 1px solid #fff;
+  border-left: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #841010;
+}
+
+.profile-button {
+  background-color: #b12424;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.nav-open-btn {
+  padding: 12px;
+  padding-inline-end: 0;
+  display: none;
+}
+
+.nav-open-btn .line {
+  width: 30px;
+  height: 2px;
+  background-color: var(--white);
+  margin-block: 4px;
+  transform-origin: left;
+  animation: menuBtn 400ms ease-in-out alternate infinite;
+}
+
+@keyframes menuBtn {
+  0% {
+    transform: scaleX(1);
   }
 
-  body {
-    background-color: black;
-    color: white;
+  100% {
+    transform: scaleX(0.5);
   }
+}
 
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 50px;
-    font-family: "Anek Kannada", sans-serif;
-    font-weight: thin;
-    font-size: 12px;
-    letter-spacing: 1.25px;
-    text-transform: uppercase;
-    padding-left: 5px;
-    padding-right: 5px;
-    
-  }
+.nav-open-btn .line-2 {
+  animation-delay: 150ms;
+}
 
-  .logo {
-    margin-right: 10%;
-    width: 65px;
-    height: auto;
-    
-  }
+.nav-open-btn .line-3 {
+  animation-delay: 300ms;
+}
 
-  .search-container {
-    background-color: #fff;
-    border-radius: 20px;  
-    padding-left: 10px;
+.preview{
+  background-image: url("https://www.bmw.com.ph/content/dam/bmw/marketASIA/bmw_com_ph/all-models/x-series/x1/U11_X1_sDrive18d_xLine-stage-desktop.jpg.asset.1683962737656.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.75);
+  padding: 240px 5%
+}
 
-  }
+.discover{
+  padding: 15px 40px;
+  font-size: 16px;
+  background-color: #b12424;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  form.example input[type=text] {
-    padding: 10px;
-    font-size: 17px;
-    border: 1px solid #fff;
-    float: left;
-    width: 80%;
-    background-color: #fff;
-    border-radius: 20px;
-  }
+.discover:hover{
+  color: #b12424;
+  background-color: white;
+}
 
-  form.example button {
-    float: left;
-    width: 20%;
-    padding: 10px;
-    background: #b12424;
-    color: white;
-    font-size: 17px;
-    border: 1px solid #fff;
-    border-left: none;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-
-  form.example button:hover {
-    background: #841010;
-  }
-
-  .profile-button {
-    background-color: #b12424;
-    border: none;
-    color: white;
-    padding: 5px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 30px;
-    margin-top: 5px;
-    cursor: pointer;
-    border-radius: 20px;
-  }
+.content{
+  margin-top: 250px;
+}
 
 .slideshow-container {
   max-width: 800px;
@@ -85,7 +169,23 @@
   margin: auto;
 }
 
-.prev, .next {
+.mySlides h2{
+  color:#fff;
+  font-size: 50px;
+  font-weight: 50px;
+  text-align: center;
+  
+}
+
+.mySlides img {
+  width: 100;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  margin-left: 10%;
+}
+
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -96,21 +196,23 @@
   font-weight: bold;
   font-size: 50px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 60%;
   user-select: none;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #000;
 }
 
-.prev{
+.prev {
   left: -100px;
 }
+
 .next {
   right: -100px;
   border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .text {
@@ -133,18 +235,24 @@
 
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   margin: 10px 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 5%;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #717171;
+}
+
+.dot-container {
+  text-align: center;
 }
 
 .fade {
@@ -153,15 +261,13 @@
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+  from {
+    opacity: .4
+  }
 
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-  max-width: 400px;
-  position: relative;
-  margin: auto;
+  to {
+    opacity: 1
+  }
 }
 
 .explore-button-container {
@@ -174,17 +280,104 @@
   background-color: #b12424;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 10px 0;
 }
 
 .explore-button:hover {
-  background-color: #b12424;
+  background-color: #fff;
+  color: #b12424;
 }
 
-h1{
-  font-size: 75px;
-  margin-left: 40%;
-  margin-top: 60px;
+footer {
+  margin-top: 100px
+}
+
+.table-cell-header {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.table-cell-body {
+  flex: 1;
+  padding: 10px;
+}
+
+.footer-table {
+  width: 100%;
+  background-color: #1b1b1b;
+  color: #000;
+  padding: 30px;
+  font-weight: lighter;
+}
+
+.footer-table td {
+  padding: 30px;
+  vertical-align: top;
+  border: 1px solid #1b1b1b;
+}
+
+.footer-table h4 {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-table ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px
+}
+
+.footer-table a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  margin: 5px 0;
+}
+
+.footer-table a:hover {
+  color: lightgrey;
+}
+
+.footer-table img{
+  height: auto;
+  width: 50%;
+  margin-top: 10px;
+}
+
+/* Media query */
+@media only screen and (max-width: 428px) {
+  .header {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  form.example input[type=text] {
+    width: 60%;
+  }
+
+  form.example button {
+    width: 30%;
+  }
+
+  .profile-button {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .slideshow-container {
+    max-width: 100%;
+  }
+
+  .prev,
+  .next {
+    font-size: 30px
+
+  }
 }
